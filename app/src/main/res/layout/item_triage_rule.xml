@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- 规则ID和状态 -->
+        <TextView
+            android:id="@+id/ruleIdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="规则 #001"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/statusChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="活跃"
+            android:textSize="12sp"
+            app:chipMinHeight="24dp"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 分诊等级 -->
+        <TextView
+            android:id="@+id/triageLevelLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分诊等级："
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ruleIdText" />
+
+        <TextView
+            android:id="@+id/triageLevelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一级（危重）"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_dark"
+            app:layout_constraintStart_toEndOf="@id/triageLevelLabel"
+            app:layout_constraintTop_toTopOf="@id/triageLevelLabel" />
+
+        <!-- 症状描述 -->
+        <TextView
+            android:id="@+id/symptomsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="症状描述："
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/triageLevelLabel" />
+
+        <TextView
+            android:id="@+id/symptomsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="胸痛、呼吸困难"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/symptomsLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/symptomsLabel" />
+
+        <!-- 生命体征 -->
+        <TextView
+            android:id="@+id/vitalSignsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="生命体征："
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/symptomsText" />
+
+        <TextView
+            android:id="@+id/vitalSignsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="血压>180/110mmHg"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/vitalSignsLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/vitalSignsLabel" />
+
+        <!-- 目标科室 -->
+        <TextView
+            android:id="@+id/departmentLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="目标科室："
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vitalSignsText" />
+
+        <TextView
+            android:id="@+id/departmentText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="急诊科"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/departmentLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/departmentLabel" />
+
+        <!-- 操作按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="end"
+            app:layout_constraintTop_toBottomOf="@id/departmentText">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="编辑"
+                android:textSize="12sp"
+                android:layout_marginEnd="8dp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="停用"
+                android:textSize="12sp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView> 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_department"
+        android:icon="@drawable/ic_department"
+        android:title="科室管理" />
+
+    <item
+        android:id="@+id/navigation_triage"
+        android:icon="@drawable/ic_triage"
+        android:title="分诊" />
+
+    <item
+        android:id="@+id/navigation_statistics"
+        android:icon="@drawable/ic_statistics"
+        android:title="统计" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="个人信息" />
+</menu> 

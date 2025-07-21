@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/admin_nav_graph"
+    app:startDestination="@id/navigation_department">
+
+    <fragment
+        android:id="@+id/navigation_department"
+        android:name="com.example.qimo4.fragment.DepartmentManagementFragment"
+        android:label="科室管理" />
+
+    <fragment
+        android:id="@+id/navigation_triage"
+        android:name="com.example.qimo4.fragment.TriageFragment"
+        android:label="分诊" />
+
+    <fragment
+        android:id="@+id/navigation_statistics"
+        android:name="com.example.qimo4.fragment.StatisticsFragment"
+        android:label="统计" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.qimo4.fragment.ProfileFragment"
+        android:label="个人信息" />
+
+    <!-- 其他导航目标将在后续添加 -->
+
+</navigation> 
